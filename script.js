@@ -95,25 +95,30 @@ function setOperator(input = "add") {
 
 
 function appendToEntry(input) {
-
-
-    //This if is to check to weather a "." already exists in the currentEntry, if the user inputs it, and only add it if it doesn't exist
-    if (input === ".") {
-        let entryArray = currentEntry.split("");
-        let dotAlreadyPresent = false;
-        for (character in entryArray) {
-            if (entryArray[character] === ".") {
-                dotAlreadyPresent = true;
+    if (currentEntry.length < 10) {
+        
+            //This if is to check to weather a "." already exists in the currentEntry, if the user inputs it, and only add it if it doesn't exist
+        if (input === ".") {
+            let entryArray = currentEntry.split("");
+            let dotAlreadyPresent = false;
+            for (character in entryArray) {
+                if (entryArray[character] === ".") {
+                    dotAlreadyPresent = true;
+                }
             }
-        }
-        if (!dotAlreadyPresent) {
+            if (!dotAlreadyPresent) {
+                currentEntry += input;
+                display.innerText = currentEntry;
+            }
+        } else {
             currentEntry += input;
             display.innerText = currentEntry;
         }
-    } else {
-        currentEntry += input;
-        display.innerText = currentEntry;
+
     }
+
+
+    
 }
 
 function reset() {

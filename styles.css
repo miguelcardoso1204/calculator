@@ -76,6 +76,13 @@ body {
     font-weight: 600;
 }
 
+.key:active {
+    position: relative;
+    top: 5px;
+    background-color: rgb(73, 155, 128);
+    box-shadow: 0 -3px 2px rgb(40, 83, 69);
+}
+
 #key0 {
     grid-column-start: 1;
     grid-column-end:   3;
@@ -91,7 +98,21 @@ body {
     grid-row-end: 6;
 }
 
+#keyEqual:active {
+    position: relative;
+    top: 5px;
+    background-color: rgb(187, 62, 62);
+    box-shadow: 0 -3px 2px rgb(110, 36, 36);
+}
+
 #keyC, #keyCE {
     background-color: rgb(122, 238, 118);
     box-shadow: 0 5px 2px rgb(81, 163, 78);
+}
+
+#keyC:active, #keyCE:active {
+    position: relative;
+    top: 5px;
+    background-color: rgb(81, 163, 78);
+    box-shadow: 0 -3px 2px rgb(47, 97, 46);
 }
