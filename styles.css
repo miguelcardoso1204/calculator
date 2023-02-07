@@ -11,7 +11,13 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+    justify-content: flex-end;
+}
+
 #calculatorFrame {
+    align-self: flex-end;
     height: 620px;
     width: 400px;
     background-color: #76c2e6;
