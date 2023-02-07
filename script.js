@@ -105,7 +105,6 @@ function appendToEntry(input) {
             if (entryArray[character] === ".") {
                 dotAlreadyPresent = true;
             }
-            console.log(character);
         }
         if (!dotAlreadyPresent) {
             currentEntry += input;
@@ -126,7 +125,6 @@ function reset() {
 function deleteCharacter() {
     currentEntry = currentEntry.slice(0, currentEntry.length - 1);
     display.innerText = currentEntry;
-    console.log(currentEntry);
 }
 
 
@@ -151,3 +149,65 @@ document.getElementById("key3").addEventListener('click', () => appendToEntry(3)
 document.getElementById("keyEqual").addEventListener('click', () => operate(storedValue, currentEntry, operator));
 document.getElementById("key0").addEventListener('click', () => appendToEntry(0));
 document.getElementById("key.").addEventListener('click', () => appendToEntry("."));
+
+
+document.addEventListener('keydown', (event) => {
+    var key = event.key;
+    console.log(key);
+    switch (key) {
+        case "Delete":
+            reset();
+            break;
+        case "Backspace":
+            deleteCharacter();
+            break;
+        case "+":
+            setOperator("+");
+            break;
+        case "-":
+            setOperator("-");
+            break;
+        case "/":
+            setOperator("/");
+            break;
+        case "*":
+            setOperator("*");
+            break;
+        case "1":
+            appendToEntry(1);
+            break;
+        case "2":
+            appendToEntry(2);
+            break;
+        case "3":
+            appendToEntry(3);
+            break;
+        case "4":
+            appendToEntry(4);
+            break;
+        case "5":
+            appendToEntry(5);
+            break;
+        case "6":
+            appendToEntry(6);
+            break;
+        case "7":
+            appendToEntry(7);
+            break;
+        case "1":
+            appendToEntry(8);
+            break;
+        case "1":
+            appendToEntry(9);
+            break;
+        case ".":
+            appendToEntry(".");
+            break;
+        case "=":
+            operate(storedValue, currentEntry, operator);
+            break;
+        case "Enter":
+            operate(storedValue, currentEntry, operator);
+            break;
+    }
+});
