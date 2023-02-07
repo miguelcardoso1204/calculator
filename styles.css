@@ -13,11 +13,14 @@
 
 body {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://img.freepik.com/free-vector/wooden-dining-table-top-view-realistic-vector_107791-13011.jpg?w=1380&t=st=1675769343~exp=1675769943~hmac=8056328065e8d0b2eee6a8c13a20750f719e05fa343b556a931014e35bb7b996);
+    background-size: 100% 155%;
 }
 
 #calculatorFrame {
-    align-self: flex-end;
     height: 620px;
     width: 400px;
     background-color: #76c2e6;
